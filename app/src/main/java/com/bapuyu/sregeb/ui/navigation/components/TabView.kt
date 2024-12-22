@@ -8,15 +8,22 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.bapuyu.sregeb.data.model.navigation.TabBarItem
+import com.bapuyu.sregeb.ui.theme.Grey
+import com.bapuyu.sregeb.utils.topBorder
 
 @Composable
 fun TabView(tabBarItems: List<TabBarItem>, navController: NavController) {
     var selectedTabIndex by rememberSaveable { mutableIntStateOf(0) }
 
-    NavigationBar {
-        // looping over each tab to generate the views and navigation for each item
+    NavigationBar(
+        containerColor = Color.White,
+        modifier = Modifier
+            .topBorder(Grey, 2F)
+    ) {
         tabBarItems.forEachIndexed { index, tabBarItem ->
             NavigationBarItem(
                 selected = selectedTabIndex == index,
