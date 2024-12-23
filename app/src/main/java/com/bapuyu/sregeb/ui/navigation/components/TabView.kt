@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.bapuyu.sregeb.data.model.navigation.TabBarItem
+import com.bapuyu.sregeb.ui.theme.LightSky
 import com.bapuyu.sregeb.ui.theme.WhiteSmoke
-import com.bapuyu.sregeb.ui.theme.LightGreen
 import com.bapuyu.sregeb.utils.topBorder
 
 @Composable
@@ -30,7 +30,7 @@ fun TabView(tabBarItems: List<TabBarItem>, navController: NavController) {
         horizontalArrangement = Arrangement.SpaceAround,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
-            .topBorder(LightGreen, 1F)
+            .topBorder(LightSky, 1F)
             .background(WhiteSmoke)
             .height(80.dp)
             .fillMaxWidth()

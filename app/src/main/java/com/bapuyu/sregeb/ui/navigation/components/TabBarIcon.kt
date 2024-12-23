@@ -12,8 +12,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.bapuyu.sregeb.ui.theme.DarkGrey
-import com.bapuyu.sregeb.ui.theme.PrimaryGreen
+import com.bapuyu.sregeb.ui.theme.DarkSky
+import com.bapuyu.sregeb.ui.theme.LightSky
 
 @Composable
 fun TabBarIcon(
@@ -28,13 +28,13 @@ fun TabBarIcon(
             Icon(
                 imageVector = if (isSelected) {selectedIcon} else {unselectedIcon},
                 contentDescription = title,
-                tint = if (isSelected) PrimaryGreen else DarkGrey,
+                tint = if (isSelected) DarkSky else LightSky,
                 modifier = Modifier.size(30.dp)
             )
             Text(
                 fontSize = 12.sp,
-                color = if (isSelected) PrimaryGreen else DarkGrey,
-                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                color = if (isSelected) DarkSky else LightSky,
+                fontWeight = FontWeight.Bold,
                 text = title
             )
         }

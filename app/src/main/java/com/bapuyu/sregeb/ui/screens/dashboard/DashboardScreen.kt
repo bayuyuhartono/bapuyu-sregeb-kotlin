@@ -17,7 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.bapuyu.sregeb.ui.theme.WhiteSmoke
-import com.bapuyu.sregeb.ui.theme.PrimaryGreen
+import com.bapuyu.sregeb.ui.theme.PrimarySky
 
 @Composable
 fun DashBoardScreen() {
@@ -27,7 +27,7 @@ fun DashBoardScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(90.dp)
-                    .background(PrimaryGreen)
+                    .background(PrimarySky)
                     .padding(16.dp)
             ) {
                 Text(
