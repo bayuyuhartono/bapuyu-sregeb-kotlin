@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.bapuyu.sregeb.ui.theme.DarkSky
+import com.bapuyu.sregeb.ui.theme.BlackText
 
 @Composable
 fun TitleCard(
@@ -22,13 +22,13 @@ fun TitleCard(
         modifier = Modifier.fillMaxWidth()
     ) {
         Text(
-            color = DarkSky,
+            color = BlackText,
             text = title,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold,
         )
         Text(
-            color = DarkSky,
+            color = BlackText,
             text = clickTitle ?: "Lihat semua >",
             fontSize = 12.sp,
             fontWeight = FontWeight.Normal,

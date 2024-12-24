@@ -12,6 +12,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.bapuyu.sregeb.ui.screens.dashboard.components.AttendanceCard
+import com.bapuyu.sregeb.ui.screens.dashboard.components.Menu
 import com.bapuyu.sregeb.ui.screens.dashboard.components.ScoresCard
 import com.bapuyu.sregeb.ui.screens.dashboard.components.TopBar
 import com.bapuyu.sregeb.ui.theme.WhiteSmoke
@@ -29,14 +31,19 @@ fun DashBoardScreen() {
             .windowInsetsPadding(WindowInsets.statusBars)
     ) { contentPadding ->
         Column(
-            verticalArrangement = Arrangement.SpaceBetween,
+            verticalArrangement = Arrangement.spacedBy(24.dp),
             modifier = Modifier
                 .fillMaxSize()
                 .background(WhiteSmoke)
                 .padding(contentPadding)
-                .padding(16.dp)
+                .padding(
+                    horizontal = 16.dp,
+                    vertical = 24.dp
+                )
         ) {
+            Menu()
             ScoresCard()
+            AttendanceCard()
         }
     }
 }

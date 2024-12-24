@@ -26,7 +26,7 @@ fun BaseCard(
             )
             .clip(RoundedCornerShape(20.dp))
             .background(color ?: WhiteSmoke)
-            .padding(16.dp)
+            .padding(32.dp)
     ) {
         content()
     }

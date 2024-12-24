@@ -24,8 +24,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bapuyu.sregeb.R
-import com.bapuyu.sregeb.ui.theme.DarkSky
-import com.bapuyu.sregeb.ui.theme.LightSky
+import com.bapuyu.sregeb.ui.theme.DarkBlue
+import com.bapuyu.sregeb.ui.theme.PrimaryBlue
 import com.bapuyu.sregeb.ui.theme.WhiteSmoke
 
 @Composable
@@ -34,25 +34,20 @@ fun TopBar(
     name: String,
     classified: String,
 ) {
+    val borderSize = 60.dp
     Column (
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
             .shadow(
                 elevation = 10.dp,
-                shape = RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp)
+                shape = RoundedCornerShape(bottomStart = borderSize, bottomEnd = borderSize)
             )
-            .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
+            .clip(RoundedCornerShape(bottomStart = borderSize, bottomEnd = borderSize))
             .fillMaxWidth()
-            .background(WhiteSmoke)
-            .height(130.dp)
-            .padding(16.dp)
+            .background(PrimaryBlue)
+            .height(180.dp)
+            .padding(32.dp)
     ) {
-        Text(
-            color = DarkSky,
-            text = school,
-            fontSize = 22.sp,
-            fontWeight = FontWeight.Bold
-        )
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -65,14 +60,14 @@ fun TopBar(
             ) {
                 Column {
                     Text(
-                        color = DarkSky,
+                        color = WhiteSmoke,
                         text = name,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         lineHeight = 2.sp
                     )
                     Text(
-                        color = DarkSky,
+                        color = WhiteSmoke,
                         text = classified,
                         fontSize = 12.sp,
                         lineHeight = 2.sp
@@ -86,8 +81,14 @@ fun TopBar(
                 modifier = Modifier
                     .size(60.dp)
                     .clip(CircleShape)
-                    .border(3.dp, LightSky, CircleShape)
+                    .border(2.dp, DarkBlue, CircleShape)
             )
         }
+        Text(
+            color = WhiteSmoke,
+            text = school,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
