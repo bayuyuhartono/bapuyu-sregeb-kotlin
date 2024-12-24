@@ -2,40 +2,28 @@ package com.bapuyu.sregeb.ui.screens.dashboard
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.bapuyu.sregeb.ui.screens.dashboard.components.ScoresCard
+import com.bapuyu.sregeb.ui.screens.dashboard.components.TopBar
 import com.bapuyu.sregeb.ui.theme.WhiteSmoke
-import com.bapuyu.sregeb.ui.theme.PrimarySky
 
 @Composable
 fun DashBoardScreen() {
     Scaffold(
-        topBar = {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(90.dp)
-                    .background(PrimarySky)
-                    .padding(16.dp)
-            ) {
-                Text(
-                    color = WhiteSmoke,
-                    text = "Budi Budimen"
-                )
-            }
-        },
+        topBar = { TopBar(
+            "Ar-Rauf Islamic School",
+            "Budi Budimen",
+            "TK A"
+        ) },
         modifier = Modifier
             .background(WhiteSmoke)
             .windowInsetsPadding(WindowInsets.statusBars)
@@ -46,8 +34,16 @@ fun DashBoardScreen() {
                 .fillMaxSize()
                 .background(WhiteSmoke)
                 .padding(contentPadding)
+                .padding(16.dp)
         ) {
-            Text("Home")
+            ScoresCard()
         }
     }
 }
+
+
+//@Preview
+//@Composable
+//fun DashboardPreview() {
+//    DashBoardScreen()
+//}
