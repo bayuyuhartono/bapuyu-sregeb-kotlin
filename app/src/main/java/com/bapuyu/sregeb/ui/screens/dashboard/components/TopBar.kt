@@ -62,14 +62,14 @@ fun TopBar(
                     Text(
                         color = WhiteSmoke,
                         text = name,
-                        fontSize = 16.sp,
+                        fontSize = 18.sp,
                         fontWeight = FontWeight.Bold,
                         lineHeight = 2.sp
                     )
                     Text(
                         color = WhiteSmoke,
                         text = classified,
-                        fontSize = 12.sp,
+                        fontSize = 14.sp,
                         lineHeight = 2.sp
                     )
                 }
