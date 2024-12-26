@@ -25,9 +25,9 @@ import com.bapuyu.sregeb.ui.screens.dashboard.DashBoardScreen
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun Navbar() {
-    val homeTab = TabBarItem(title = "Home", selectedIcon = Icons.Filled.Home, unselectedIcon = Icons.Outlined.Home)
-    val paymentTab = TabBarItem(title = "Payment", selectedIcon = Icons.Filled.ShoppingCart, unselectedIcon = Icons.Outlined.ShoppingCart)
-    val profileTab = TabBarItem(title = "Profile", selectedIcon = Icons.Filled.AccountCircle, unselectedIcon = Icons.Outlined.AccountCircle, badgeAmount = 3)
+    val homeTab = TabBarItem(routeName = "home", title = "Home", selectedIcon = Icons.Filled.Home, unselectedIcon = Icons.Outlined.Home)
+    val paymentTab = TabBarItem(routeName = "payment", title = "Pembayaran", selectedIcon = Icons.Filled.ShoppingCart, unselectedIcon = Icons.Outlined.ShoppingCart)
+    val profileTab = TabBarItem(routeName = "profile", title = "Profile", selectedIcon = Icons.Filled.AccountCircle, unselectedIcon = Icons.Outlined.AccountCircle, badgeAmount = 3)
 
     val tabBarItems = listOf(homeTab, paymentTab, profileTab)
 
@@ -42,15 +42,9 @@ fun Navbar() {
                 navController = navController,
                 startDestination = homeTab.title,
             ) {
-                composable(homeTab.title) {
-                    DashBoardScreen()
-                }
-                composable(paymentTab.title) {
-                    Text(paymentTab.title)
-                }
-                composable(profileTab.title) {
-                    Text(profileTab.title)
-                }
+                composable(homeTab.routeName) { DashBoardScreen() }
+                composable(paymentTab.routeName) { Text(paymentTab.title) }
+                composable(profileTab.routeName) { Text(profileTab.title) }
             }
         }
     }

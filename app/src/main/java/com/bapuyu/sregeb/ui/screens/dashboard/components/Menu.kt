@@ -21,8 +21,8 @@ fun Menu() {
     val menuList: List<Menu> = arrayListOf(
         Menu("Nilai", "-", "-"),
         Menu("Absensi", "-", "-"),
-        Menu("Agenda", "-", "-"),
         Menu("Berita", "-", "-"),
+        Menu("Calendar", "-", "-"),
     )
 
     LazyVerticalGrid(

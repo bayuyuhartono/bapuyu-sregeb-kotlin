@@ -26,6 +26,7 @@ fun DashBoardScreen() {
     Scaffold(
         modifier = Modifier
             .background(WhiteSmoke)
+            .padding(bottom = 64.dp)
             .windowInsetsPadding(WindowInsets.statusBars)
     ) { contentPadding ->
             Column(
